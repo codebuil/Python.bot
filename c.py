@@ -15,7 +15,7 @@ while(t):
     elem = driver.find_element(By.XPATH,'//*[@id="alert"]')
     try:
         
-        elem.send_keys(Keys.RETURN)
+        elem.send_keys(Keys.ESCAPE)
 
         t=False
     except:
