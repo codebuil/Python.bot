@@ -37,12 +37,23 @@ while(t):
         t=True
 t=True
 
+alert = driver.switch_to.default_content()
 
-time.sleep(2)
+t=True
+while(t):
+    elem = driver.find_element(By.XPATH,"/html/body/div[1]/div/div/div[1]/div[2]/div/div/div[4]/div/div[1]/div[2]/div")
+    try:
+        print(elem.text)
+        t=False
+    except:
+        t=True
+t=True
+
+
 
 
 
 elem = driver.find_element(By.XPATH,"/html/body/div[1]/div/div/div[3]/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]")
 print(elem.text)
-#driver.close()
+driver.close()
 
